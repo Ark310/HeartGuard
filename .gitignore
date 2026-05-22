@@ -1,0 +1,18 @@
+# Admin config — contains your bcrypt password hash, never commit this
+config/config.php
+
+# User-uploaded images (runtime data, not source code)
+uploads/*
+!uploads/.gitkeep
+
+# Claude Code local settings
+.claude/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Temp files from atomic writes
+data/content.json.tmp.*
