@@ -1,0 +1,122 @@
+{
+  "navbar": {
+    "logo": "assets/images/logo-placeholder.svg",
+    "site_name": "HeartGuard",
+    "bg_color": "#0a0a0a",
+    "visible": true
+  },
+  "hero": {
+    "headline": "Your Heart. Protected.",
+    "subheadline": "The smart watch built for people who can't afford to ignore the warning signs.",
+    "cta_text": "Learn More",
+    "watch_image": "assets/images/watch-placeholder.svg",
+    "bg_color": "#0a0a0a",
+    "visible": true
+  },
+  "features": {
+    "section_title": "Features",
+    "bg_color": "#111111",
+    "visible": true,
+    "cards": [
+      {
+        "title": "Heart Monitoring",
+        "description": "Real-time tracking of heart rate, blood pressure, oxygen levels, and irregular patterns.",
+        "icon": "assets/images/icon-heart.svg"
+      },
+      {
+        "title": "Nutrition Tracking",
+        "description": "Personalized dietary guidance based on your condition. Warnings for high-sodium and high-risk foods.",
+        "icon": "assets/images/icon-nutrition.svg"
+      },
+      {
+        "title": "Emergency Response",
+        "description": "Automatic alerts to emergency services and family members with your live location if a dangerous event is detected.",
+        "icon": "assets/images/icon-emergency.svg"
+      }
+    ]
+  },
+  "how_it_works": {
+    "section_title": "How It Works",
+    "bg_color": "#0a0a0a",
+    "visible": true,
+    "steps": [
+      {
+        "number": "01",
+        "title": "Wear HeartGuard Daily",
+        "description": "Put on your HeartGuard watch just like any other — it works silently in the background.",
+        "image": "assets/images/step-placeholder.svg"
+      },
+      {
+        "number": "02",
+        "title": "Continuous Monitoring",
+        "description": "HeartGuard continuously tracks your heart rate, blood pressure, SpO2, and ECG patterns 24/7.",
+        "image": "assets/images/step-placeholder.svg"
+      },
+      {
+        "number": "03",
+        "title": "Real-Time Alerts",
+        "description": "Receive instant alerts and personalized nutrition recommendations based on your health data.",
+        "image": "assets/images/step-placeholder.svg"
+      },
+      {
+        "number": "04",
+        "title": "Emergency Response",
+        "description": "If a dangerous cardiac event is detected, HeartGuard automatically contacts emergency services with your location.",
+        "image": "assets/images/step-placeholder.svg"
+      }
+    ]
+  },
+  "who_its_for": {
+    "section_title": "Who It's For",
+    "bg_color": "#111111",
+    "visible": true,
+    "left": {
+      "title": "Heart Disease Patients",
+      "description": "For those living with heart disease, every moment matters. HeartGuard gives you and your family peace of mind — continuous monitoring that catches warning signs before they become emergencies.",
+      "image": "assets/images/person-placeholder.svg"
+    },
+    "right": {
+      "title": "Athletes",
+      "description": "You push your body to the limit. HeartGuard ensures you never push past it — monitoring your cardiac health during intense training and alerting you when your body needs to rest.",
+      "image": "assets/images/person-placeholder.svg"
+    }
+  },
+  "story": {
+    "section_title": "Why HeartGuard Exists",
+    "bg_color": "#0a0a0a",
+    "visible": true,
+    "narrative": "HeartGuard was born from a story many families know too well. A father who loved basketball so much that he kept playing — and kept ignoring what his body was telling him. He didn't have a device that could speak louder than his will to stay on the court. HeartGuard is built so that story doesn't have to repeat itself. It combines health monitoring, nutrition tracking, and emergency protection into one wearable — so the warning signs are never ignored again.",
+    "quote": "He didn't have a device that could speak louder than his will to play.",
+    "quote_author": "The story behind HeartGuard"
+  },
+  "specs": {
+    "section_title": "Technical Specs",
+    "bg_color": "#111111",
+    "visible": true,
+    "rows": [
+      { "label": "Battery Life", "value": "Up to 7 days" },
+      { "label": "Sensors", "value": "Heart rate, SpO2, Blood pressure, ECG" },
+      { "label": "Water Resistance", "value": "50 metres" },
+      { "label": "Connectivity", "value": "Bluetooth 5.2, Wi-Fi" },
+      { "label": "Compatibility", "value": "iOS & Android" }
+    ]
+  },
+  "contact": {
+    "section_title": "Get In Touch",
+    "description": "Have questions about HeartGuard? We'd love to hear from you.",
+    "cta_text": "Contact Us",
+    "email": "hello@heartguard.com",
+    "bg_color": "#0a0a0a",
+    "visible": true
+  },
+  "footer": {
+    "logo": "assets/images/logo-placeholder.svg",
+    "site_name": "HeartGuard",
+    "copyright": "© 2026 HeartGuard. All rights reserved.",
+    "social_twitter": "",
+    "social_instagram": "",
+    "social_linkedin": "",
+    "bg_color": "#0a0a0a",
+    "visible": true
+  }
+}
