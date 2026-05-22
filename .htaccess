@@ -1,0 +1,19 @@
+Options -Indexes
+
+# Block config and data directories
+<IfModule mod_authz_core.c>
+    <DirectoryMatch "/(config|data)$">
+        Require all denied
+    </DirectoryMatch>
+</IfModule>
+
+# Fallback for older Apache
+<IfModule !mod_authz_core.c>
+    <DirectoryMatch "/(config|data)$">
+        Order deny,allow
+        Deny from all
+    </DirectoryMatch>
+</IfModule>
+
+# Enable PHP to serve index.php by default
+DirectoryIndex index.php index.html
