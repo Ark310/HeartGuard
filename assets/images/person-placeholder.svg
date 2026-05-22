@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" rx="8" fill="#1a1a1a"/>
+  <circle cx="200" cy="180" r="60" fill="#222222"/>
+  <path d="M80 420 C80 340 320 340 320 420" fill="#222222"/>
+  <text x="200" y="480" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#555555">Person image placeholder</text>
+</svg>

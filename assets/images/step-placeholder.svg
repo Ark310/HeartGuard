@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" rx="8" fill="#1a1a1a"/>
+  <rect x="160" y="100" width="80" height="80" rx="8" fill="#222222"/>
+  <text x="200" y="230" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#555555">Step image placeholder</text>
+</svg>
