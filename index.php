@@ -99,7 +99,7 @@ function sectionAttrs($section) {
 </nav>
 
 <!-- Hero -->
-<section id="hero" <?= sectionAttrs('hero') ?>>
+<section id="hero" class="hero" <?= sectionAttrs('hero') ?>>
   <div class="section-toolbar" role="toolbar">
     <button class="toolbar-btn toolbar-image" data-image-target="hero.watch_image" title="Swap watch image">🖼</button>
     <input class="toolbar-color" type="color" value="<?= sectionBg('hero') ?>" title="Background color">

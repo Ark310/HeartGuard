@@ -1,19 +1,46 @@
 (function () {
   'use strict';
 
-  // ── Navbar scroll transition ─────────────────────────
-  const navbar = document.getElementById('navbar');
+  const navbar    = document.getElementById('navbar');
+  const heroWatch = document.querySelector('.hero-watch');
 
+  // ── Scroll progress bar ───────────────────────────────
+  const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress';
+  document.body.prepend(progressBar);
+
+  // ── Scroll-driven UI updates ──────────────────────────
   function updateNavbar() {
-    if (window.scrollY > 60) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
   }
 
-  window.addEventListener('scroll', updateNavbar, { passive: true });
+  function updateProgress() {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = scrollable > 0
+      ? (window.scrollY / scrollable * 100) + '%'
+      : '0%';
+  }
+
+  function updateParallax() {
+    if (!heroWatch || window.scrollY >= window.innerHeight) return;
+    heroWatch.style.transform = `translateY(${window.scrollY * 0.12}px)`;
+  }
+
+  // Single rAF-batched scroll handler — no jank
+  let rafId = null;
+  function onScroll() {
+    if (rafId) return;
+    rafId = requestAnimationFrame(() => {
+      updateNavbar();
+      updateProgress();
+      updateParallax();
+      rafId = null;
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
   updateNavbar();
+  updateProgress();
 
   // ── Hamburger menu ───────────────────────────────────
   const hamburger = document.getElementById('hamburger');
@@ -25,7 +52,6 @@
     hamburger.setAttribute('aria-expanded', String(isOpen));
   });
 
-  // Close menu on nav link click (mobile)
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
@@ -40,10 +66,9 @@
       const target = document.querySelector(this.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
-      const navHeight = navbar.offsetHeight;
       const adminBar  = document.getElementById('admin-bar');
-      const adminBarH = (adminBar && adminBar.style.display !== 'none') ? adminBar.offsetHeight : 0;
-      const offset    = target.getBoundingClientRect().top + window.scrollY - navHeight - adminBarH - 16;
+      const adminBarH = document.body.classList.contains('admin-mode') ? adminBar.offsetHeight : 0;
+      const offset    = target.getBoundingClientRect().top + window.scrollY - navbar.offsetHeight - adminBarH - 16;
       window.scrollTo({ top: offset, behavior: 'smooth' });
     });
   });
@@ -59,18 +84,5 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
   document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
-
-  // ── Hero watch parallax ──────────────────────────────
-  const heroWatch = document.querySelector('.hero-watch');
-
-  function updateParallax() {
-    if (!heroWatch) return;
-    const scrollY = window.scrollY;
-    if (scrollY < window.innerHeight) {
-      heroWatch.style.transform = `translateY(${scrollY * 0.12}px)`;
-    }
-  }
-
-  window.addEventListener('scroll', updateParallax, { passive: true });
 
 })();
